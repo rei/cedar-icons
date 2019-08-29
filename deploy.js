@@ -1,12 +1,18 @@
 /* eslint-disable no-console */
 const ghpages = require('gh-pages');
 
-ghpages.publish('docs', (err) => {
-  if (err) {
-    console.error(`deploy error: ${err}`);
-    return;
-  }
+// TODO: test that this works
+// Don't publish gh-pages if prerelease
+if (process.env.NODE_ENV === 'prerelease') return;
 
-  console.log(`Docs deployed to gh-pages branch`);
-});
+else {
+  ghpages.publish('docs', (err) => {
+    if (err) {
+      console.error(`deploy error: ${err}`);
+      return;
+    }
+  
+    console.log(`Docs deployed to gh-pages branch`);
+  });
+}
 
