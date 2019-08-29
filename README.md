@@ -2,17 +2,17 @@
 
 ## Summary
 
-`@rei/icons` is home to the raw svg files that conform to [REI's Iconography guidelines](https://rei.github.io/rei-cedar-docs/foundation/iconography/)
+`@rei/cedar-icons` is home to the raw svg files that conform to [REI's Iconography guidelines](https://rei.github.io/rei-cedar-docs/foundation/iconography/)
 
 ## Getting Started
 
 ### Installation
 
-`npm install @rei/icons`
+`npm install @rei/cedar-icons`
 
 ### Use
 
-`@rei/icons` exposes an object that has the following structure:
+`@rei/cedar-icons` exposes an object that has the following structure:
 
 ```
 {
@@ -38,7 +38,7 @@ TODO: Notes about Vue/Cedar
 
 ### Via CLI
 
-`@rei/icons` provides a command-line interface for creating/editing a SVG symbol definition file.
+`@rei/cedar-icons` provides a command-line interface for creating/editing a SVG symbol definition file.
 
 `npx icon-sprite` will start the CLI. Follow the instructions to create your customized sprite.
 
