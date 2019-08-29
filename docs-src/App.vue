@@ -5,7 +5,7 @@
       tag="h1"
       modifier="display"
       class="cdr-text-center"
-    >@rei/icons</cdr-text>
+    >@rei/cedar-icons</cdr-text>
 
     <router-view :icon-data="flatData"/>
 

@@ -9,6 +9,6 @@ module.exports = {
       entry: './docs-src/main.js',
     }
   },
-  publicPath: process.env.NODE_ENV === 'production'? '/rei-icons/' : '/',
+  publicPath: process.env.NODE_ENV === 'production'? '/cedar-icons/' : '/',
   outputDir: 'docs',
 }
