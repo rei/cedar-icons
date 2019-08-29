@@ -1,0 +1,78 @@
+{
+  "name": "@rei/cdr-icons",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "npm run copyData && vue-cli-service serve",
+    "build": "npm-run-all build:data build:components copyData",
+    "test": "exit 0",
+    "lint": "npm run copyData && vue-cli-service lint",
+    "build:components": "node build/icon-component",
+    "build:data": "node build/icon-json",
+    "build:docs": "npm run copyData && vue-cli-service build",
+    "clean": "rimraf dist",
+    "copyData": "node build/copyDocsData.js",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build",
+    "sprite": "node build/custom-sprite"
+  },
+  "main": "dist/icons.js",
+  "module": "dist/icons.esm.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@rei/cdr-tokens": "^1.1.1",
+    "@rei/cedar": "^2.0.2",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "babel-eslint": "^10.0.3",
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
+    "core-js": "^2.6.5",
+    "downloadjs": "^1.4.7",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^6.5.2",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.7.1",
+    "sass-loader": "^7.3.1",
+    "svgstore": "^3.0.0-2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "bin": {
+    "icon-sprite": "./build/custom-sprite.js"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://git.rei.com/scm/fedpack/icons.git"
+  }
+}
