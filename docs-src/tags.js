@@ -1,3 +1,3 @@
 export default {
-  'ea-camping': ['tent']
+  'experiences-camping': ['tent']
 }
