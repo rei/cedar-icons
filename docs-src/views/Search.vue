@@ -27,7 +27,7 @@
           :href="`${publicPath}icons/${downloadPath(k)}.svg`"
           modifier="standalone"
         >
-          <cdr-card class="cdr-space-inset-one-x">
+          <cdr-card class="cdr-space-inset-one-x full-height">
             <cdr-icon 
               size="large"
               v-html="stripSVG(v)"
@@ -118,5 +118,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+.full-height {
+  height: 100%;
+}
 </style>
