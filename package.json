@@ -1,14 +1,15 @@
 {
   "name": "@rei/cedar-icons",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "private": true,
   "scripts": {
     "serve": "npm run copyData && vue-cli-service serve",
-    "build": "npm-run-all build:data build:components copyData",
+    "build": "npm-run-all build:data build:components build:full-sprite copyData",
     "test": "exit 0",
     "lint": "npm run copyData && vue-cli-service lint",
     "build:components": "node build/icon-component",
     "build:data": "node build/icon-json",
+    "build:full-sprite": "node build/all-sprite",
     "build:docs": "npm run copyData && vue-cli-service build",
     "clean": "rimraf dist",
     "copyData": "node build/copyDocsData.js",
