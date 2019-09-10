@@ -1,9 +1,11 @@
 /* eslint-disable no-console */
 const ghpages = require('gh-pages');
 
-// TODO: test that this works
 // Don't publish gh-pages if prerelease
-if (process.env.NODE_ENV === 'prerelease') return;
+if (process.env.NODE_ENV === 'prerelease') {
+  console.log(`Prerelease -- not publishing to gh-pages`);
+  return;
+}
 
 else {
   ghpages.publish('docs', (err) => {

@@ -1,7 +1,14 @@
 {
   "name": "@rei/cedar-icons",
   "version": "1.0.0-beta.0",
-  "private": true,
+  "homepage": "https://rei.github.io/cedar-icons/",
+  "description": "REI Cedar Icon Library",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "REI Software Engineering",
   "scripts": {
     "serve": "npm run copyData && vue-cli-service serve",
     "build": "npm-run-all build:data build:components build:full-sprite copyData",
@@ -35,6 +42,7 @@
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
     "core-js": "^2.6.5",
+    "cross-env": "^5.2.1",
     "downloadjs": "^1.4.7",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -76,10 +84,5 @@
   ],
   "bin": {
     "icon-sprite": "./build/custom-sprite.js"
-  },
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://git.rei.com/scm/fedpack/icons.git"
   }
 }
