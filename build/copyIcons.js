@@ -5,9 +5,6 @@ function resolve(filePath) {
   return path.join(__dirname, filePath);
 }
 
-// copy built file
-fs.copySync(resolve('../dist/'), resolve('../docs-src/lib/'));
-
 // copy icons
-fs.copySync(resolve('../icons/'), resolve('../public/icons/'));
+fs.copySync(resolve('../icons/'), resolve('../dist/icons/'));
 
