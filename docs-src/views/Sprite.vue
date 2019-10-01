@@ -29,8 +29,9 @@
             <cdr-icon
               size="large"
               inherit-color
-              v-html="stripSVG(v)"
-            />
+            >
+              <html-fragment :html="v" />
+            </cdr-icon>
             <cdr-text>{{k}}</cdr-text>
           </cdr-checkbox>
         </cdr-card>
@@ -42,6 +43,7 @@
 </template>
 
 <script>
+import HtmlFragment from '../components/HtmlFragment';
 import { CdrText, CdrRow, CdrCol, CdrIcon, CdrCard, CdrCheckbox, CdrButton } from '@rei/cedar';
 import svgstore from 'svgstore';
 import download from 'downloadjs';
@@ -49,6 +51,7 @@ import download from 'downloadjs';
 export default {
   name: 'SpriteForm',
   components: {
+    HtmlFragment,
     CdrText,
     CdrRow,
     CdrCol,
@@ -67,12 +70,6 @@ export default {
     iconData: Object,
   },
   methods: {
-    // TODO: remove this once new CdrIcon available
-    stripSVG(text) {
-      const startRx = new RegExp('(<svg[^>]*>)', 'i');
-      const endRx = new RegExp('(</svg>)', 'i');
-      return text.replace(startRx, '').replace(endRx, '').trim();
-    },
     makeSprite() {
       this.formData.forEach(icon => {
         this.sprites.add(icon, this.iconData[icon])

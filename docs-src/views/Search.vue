@@ -24,14 +24,15 @@
       >
         <cdr-link
           download
-          :href="`${publicPath}icons/${downloadPath(k)}.svg`"
+          :href="`${publicPath}icons/${k}.svg`"
           modifier="standalone"
         >
           <cdr-card class="cdr-space-inset-one-x full-height">
             <cdr-icon 
               size="large"
-              v-html="stripSVG(v)"
-            />
+            >
+              <html-fragment :html="v" />
+            </cdr-icon>
             <cdr-text>{{k}}</cdr-text>
           </cdr-card>
         </cdr-link>
@@ -41,6 +42,7 @@
 </template>
 
 <script>
+import HtmlFragment from '../components/HtmlFragment';
 import { CdrText, CdrRow, CdrCol, CdrInput, CdrIcon, CdrLink, CdrCard } from '@rei/cedar';
 
 import pickBy from 'lodash/pickBy';
@@ -50,6 +52,7 @@ import tags from '../tags';
 export default {
   name: 'Search',
   components: {
+    HtmlFragment,
     CdrText,
     CdrRow,
     CdrCol,
@@ -102,18 +105,6 @@ export default {
       return filteredData;
     },
   },
-  methods: {
-    downloadPath(name) {
-      const splitName = name.split(/-(.+)/);
-      return `${splitName[0]}/${splitName[1]}`;
-    },
-    // TODO: remove this once new CdrIcon available
-    stripSVG(text) {
-      const startRx = new RegExp('(<svg[^>]*>)', 'i');
-      const endRx = new RegExp('(</svg>)', 'i');
-      return text.replace(startRx, '').replace(endRx, '').trim();
-    }
-  }
 }
 </script>
 
