@@ -57,6 +57,10 @@ export default {
 
 <style lang="scss">
 @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+@import '~@rei/cedar/dist/reset.css';
+@import '~@rei/cedar/dist/cdr-fonts.css';
+@import '~@rei/cedar/dist/cedar.css';
+@import '~@rei/cedar/dist/utilities.css';
 
 html {
   height: 100%;
