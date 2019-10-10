@@ -11,10 +11,10 @@
   "author": "REI Software Engineering",
   "scripts": {
     "dev": "npm run copyData && vue-cli-service serve",
-    "build": "npm-run-all build:data build:full-sprite copyIcons copyData",
+    "build": "npm-run-all build:components build:full-sprite copyIcons copyData",
     "test": "exit 0",
     "lint": "npm run copyData && vue-cli-service lint",
-    "build:data": "node build/icon-json",
+    "build:components": "node build/icon-components",
     "build:full-sprite": "node build/all-sprite",
     "build:docs": "npm run copyData && vue-cli-service build",
     "clean": "rimraf dist",
@@ -27,17 +27,23 @@
     "deploy": "node ./deploy.js",
     "postpublish": "npm-run-all build build:docs deploy"
   },
-  "main": "dist/icons.js",
+  "main": "dist/icons.json",
   "module": "dist/icons.esm.js",
   "dependencies": {
-    "gh-pages": "^2.1.1"
+    "@babel/runtime-corejs3": "^7.5.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@rei/cdr-tokens": "^2.0.0",
     "@rei/cedar": "^3.0.0",
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-plugin-transform-vue-jsx": "^4.0.1",
     "babel-eslint": "^10.0.3",
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
@@ -47,7 +53,9 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "fs-extra": "^8.1.0",
+    "gh-pages": "^2.1.1",
     "inquirer": "^6.5.2",
+    "jsdom": "^15.1.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
     "npm-publish-prerelease": "^1.0.2",
