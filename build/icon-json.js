@@ -2,6 +2,7 @@
 
 const fs = require('fs-extra');
 const path = require('path');
+const _ = require('lodash');
 
 const getSvg = svgFilePath => fs.readFileSync(svgFilePath, 'utf8');
 
@@ -12,7 +13,7 @@ const makeObj = (filePath, iconObj) => {
   for (let i = 0, l = files.length; i < l; i++) {
     const fileName = files[i];
     const newPath = path.join(filePath, fileName);
-    
+
     // check if it's a directory or file
     if (fs.statSync(newPath).isDirectory()) {
       iconObj[fileName] = {};
@@ -30,5 +31,9 @@ const iconObj = makeObj(path.resolve('icons/'), {});
 // TODO: remove json output?
 fs.outputFileSync('dist/icons.json', JSON.stringify(iconObj, ' ', 2));
 fs.outputFileSync('dist/icons.js', `module.exports = ${JSON.stringify(iconObj, ' ', 2)}`);
-fs.outputFileSync('dist/icons.esm.js', `export default ${JSON.stringify(iconObj, ' ', 2)}`);
 
+const esmFile = Object.keys(iconObj).map(iconName => {
+  return `export const ${_.upperFirst(_.camelCase(iconName))} = '${iconObj[iconName]}';`
+}).join('\n')
+
+fs.outputFileSync('dist/icons.esm.js', esmFile);

@@ -16,9 +16,7 @@
 
 ```
 {
-  <icon-set>: {
-    <icon-name>: <SVG String>
-  }
+  <icon-name>: <SVG String>
 }
 ```
 
@@ -26,13 +24,9 @@ for example:
 
 ```
 {
-  ea: {
-    camping: "<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">...</svg>"
-  }
+  camping: "<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">...</svg>"
 }
 ```
-
-TODO: Notes about Vue/Cedar
 
 ## Creating a custom sprite
 
