@@ -66,9 +66,9 @@ export default {
       sprites: svgstore(),
     }
   },
-  props: {
-    iconData: Object,
-  },
+  props: [
+    'iconData'
+  ],
   methods: {
     makeSprite() {
       this.formData.forEach(icon => {

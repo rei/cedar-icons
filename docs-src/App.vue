@@ -7,7 +7,7 @@
       class="cdr-text-center"
     >@rei/cedar-icons</cdr-text>
 
-    <router-view :icon-data="flatData"/>
+    <router-view :icon-data="iconData"/>
 
   </div>
 </div>
@@ -16,9 +16,7 @@
 <script>
 import { CdrText } from '@rei/cedar';
 
-import forOwn from 'lodash/forOwn';
-import isObject from 'lodash/isObject';
-import iconData from './lib/icons.esm';
+import * as iconData from './lib/icons.esm';
 
 export default {
   name: 'App',
@@ -31,26 +29,6 @@ export default {
       publicPath: process.env.BASE_URL,
       searchTerm: '',
     }
-  },
-  computed: {
-    flatData() {
-      let finalObj = {};
-
-      const processObj = (srcObj, name='') => {
-        forOwn(srcObj, (v,k) => {
-          let fullName = name !== '' ? `${name}-${k}`: k;
-          if(isObject(v)) {
-            processObj(v, fullName);
-          } else {
-            finalObj[fullName] = v;
-          }
-        })
-      }
-
-      processObj(this.iconData);
-
-      return finalObj;
-    },
   },
 }
 </script>
