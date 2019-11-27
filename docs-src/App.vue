@@ -16,7 +16,7 @@
 <script>
 import { CdrText } from '@rei/cedar';
 
-import * as iconData from './lib/icons.esm';
+import * as iconData from './lib/icons';
 
 export default {
   name: 'App',
