@@ -43,9 +43,9 @@ To make it easier for consumers to inline individual icons we export single comp
 ### Distributed Files
 
 - `all-icons.svg`: SVG sprite sheet containing all of the icons.
-- `icons.esm.js`: ESM export of SVG markup. Exports are formatted in CamelCase and prefixed with `Icon`: `IconCaretDown`
+- `icons.esm.js`: ESM export of SVG markup. Exports are formatted in CamelCase: `CaretDown`
 - `icons.js`: ESM export of SVG markup. Icon names are formatted in kebab-case: `caret-down`
-- `icons.json`: JSON object.  Icon names formatted in kebab-case: `caret-down`
+- `icons.json`: JSON object. Icon names formatted in kebab-case: `caret-down`
 - `/icons/`: folder of .svg files. Filenames formatted in kebab-case: `caret-down.svg`
 
 ### Use

@@ -63,7 +63,12 @@ export default {
   data() {
     return {
       formData: [],
-      sprites: svgstore(),
+      sprites: svgstore({
+        svgAttrs: {
+          xmlns: "http://www.w3.org/2000/svg",
+          style: "display: none;"
+        }
+      }),
     }
   },
   props: [
@@ -75,7 +80,7 @@ export default {
         this.sprites.add(icon, this.iconData[icon])
       });
 
-      download(this.sprites.toString(), 'sprite.svg', 'image/svg+xml');
+      download(this.sprites.toString({ inline: true }), 'sprite.svg', 'image/svg+xml');
     }
   }
 }
