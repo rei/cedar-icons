@@ -6,7 +6,7 @@ module.exports = {
     //   // mutate for development...
     // }
     return {
-      entry: './docs-src/main.js',
+      entry: './main.js',
     }
   },
   publicPath: process.env.NODE_ENV === 'production'? '/cedar-icons/' : '/',
