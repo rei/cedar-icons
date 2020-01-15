@@ -10,78 +10,36 @@
   },
   "author": "REI Software Engineering",
   "scripts": {
-    "dev": "npm run copyData && vue-cli-service serve",
     "build": "npm-run-all build:data build:full-sprite copyIcons copyData",
     "test": "exit 0",
-    "lint": "npm run copyData && vue-cli-service lint",
     "build:data": "node build/icon-json",
     "build:full-sprite": "node build/all-sprite",
-    "build:docs": "npm run copyData && vue-cli-service build",
     "clean": "rimraf dist",
     "copyIcons": "node build/copyIcons.js",
     "copyData": "node build/copyDocsData.js",
     "prebuild": "npm run clean",
     "prepare": "npm run build",
     "sprite": "node build/custom-sprite",
-    "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease",
-    "deploy": "node ./deploy.js",
-    "postpublish": "npm-run-all build build:docs deploy"
+    "prerelease": "cross-env NODE_ENV=prerelease npm-publish-prerelease"
   },
   "main": "dist/icons.js",
   "module": "dist/icons.esm.js",
-  "dependencies": {
-    "gh-pages": "^2.1.1"
-  },
   "devDependencies": {
-    "@rei/cdr-tokens": "^2.0.0",
-    "@rei/cedar": "^3.0.0",
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
     "babel-eslint": "^10.0.3",
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
     "core-js": "^2.6.5",
     "cross-env": "^5.2.1",
-    "downloadjs": "^1.4.7",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "fs-extra": "^8.1.0",
     "inquirer": "^6.5.2",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
     "npm-publish-prerelease": "^1.0.2",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.7.1",
-    "sass-loader": "^7.3.1",
-    "svgstore": "^3.0.0-2",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.2",
-    "vue-template-compiler": "^2.6.10"
+    "svgstore": "^3.0.0-2"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "bin": {
     "icon-sprite": "./build/custom-sprite.js"
   }

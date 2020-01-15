@@ -7,9 +7,9 @@ yarn-error.log*
 
 # Output
 dist/
-docs/
+docs-src/docs/
 docs-src/lib/
-public/icons/
+docs-src/public/icons/
 
 # Runtime data
 pids
