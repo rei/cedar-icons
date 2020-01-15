@@ -35,14 +35,18 @@ export default {
 
 <style lang="scss">
 @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
-@import '~@rei/cedar/dist/reset.css';
+@import '~@rei/cdr-component-variables/dist/scss/index.scss';
 @import '~@rei/cedar/dist/cdr-fonts.css';
-@import '~@rei/cedar/dist/cedar.css';
-@import '~@rei/cedar/dist/utilities.css';
+@import '~@rei/cedar/dist/cedar-compiled.css';
 
 html {
   height: 100%;
   background-color: $cdr-color-background-light;
+}
+
+.router-link {
+  @include cdr-link-base-mixin;
+  @include cdr-link-standalone-mixin;
 }
 
 .page-wrap {

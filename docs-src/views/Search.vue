@@ -1,10 +1,9 @@
 <template>
   <div class="cdr-text-center">
-    <!-- TODO: don't use these classes :D -->
     <router-link
       to="/sprite"
       v-show="$route.name !== 'sprite'"
-      class="cdr-link_2.0.2 cdr-link--standalone_2.0.2"
+      class="router-link"
     >To Sprite Creator</router-link>
 
     <cdr-text class="cdr-my-space-one-x">Click on an icon below to download the source svg</cdr-text>
@@ -28,7 +27,7 @@
           modifier="standalone"
         >
           <cdr-card class="cdr-space-inset-one-x full-height">
-            <cdr-icon 
+            <cdr-icon
               size="large"
             >
               <html-fragment :html="v" />
@@ -80,7 +79,7 @@ export default {
 
       // filter by icon name
       const filteredByKey = pickBy(this.iconData, (v,k) => k.includes(this.searchTerm));
-      
+
       // filter by associated terms
       function stringArrayContains(array, str) {
         function contains(el) {

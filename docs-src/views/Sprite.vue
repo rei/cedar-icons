@@ -43,14 +43,13 @@ export default {
 </script>
 <template>
 <div class="cdr-text-center">
-  <!-- TODO: don't use these classes :D -->
   <router-link
     to="/"
     v-show="$route.name !== 'home'"
-    class="cdr-link_2.0.2 cdr-link--standalone_2.0.2"
+    class="router-link"
   >Back to Search</router-link>
 
-  <cdr-text tag="h2" modifier="heading-medium" class="cdr-my-space-one-x">Sprite Creator</cdr-text>
+  <cdr-text tag="h2" modifier="heading-serif-600 heading-serif-700@md heading-serif-700@lg" class="cdr-my-space-one-x">Sprite Creator</cdr-text>
   <cdr-text class="cdr-mb-space-two-x">Select icons and then click "Create Sprite" below to download</cdr-text>
 
   <form @submit.prevent="makeSprite">
