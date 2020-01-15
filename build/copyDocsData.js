@@ -12,5 +12,4 @@ fs.copySync(resolve('../dist/'), resolve('../docs-src/lib/'));
 
 // clean & copy icons
 rm.sync(resolve('../public/icons/'));
-fs.copySync(resolve('../icons/'), resolve('../public/icons/'));
-
+fs.copySync(resolve('../icons/'), resolve('../docs-src/public/icons/'));
