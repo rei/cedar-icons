@@ -7,9 +7,9 @@ function resolve(filePath) {
 }
 
 // clean & copy built file
-rm.sync(resolve('../docs-src/lib/'));
-fs.copySync(resolve('../dist/'), resolve('../docs-src/lib/'));
+rm.sync(resolve('./lib/'));
+fs.copySync(resolve('../dist/'), resolve('./lib/'));
 
 // clean & copy icons
-rm.sync(resolve('../public/icons/'));
-fs.copySync(resolve('../icons/'), resolve('../docs-src/public/icons/'));
+rm.sync(resolve('./public/icons/'));
+fs.copySync(resolve('../icons/'), resolve('./public/icons/'));
