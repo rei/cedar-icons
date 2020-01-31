@@ -3,7 +3,7 @@
   <div class="cdr-container cdr-py-space-four-x">
     <cdr-text
       tag="h1"
-      modifier="display"
+      modifier="heading-serif-strong-700 heading-serif-strong-900@md heading-serif-strong-1100@lg"
       class="cdr-text-center"
     >@rei/cedar-icons</cdr-text>
 
