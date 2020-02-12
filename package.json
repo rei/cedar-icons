@@ -1,6 +1,6 @@
 {
   "name": "@rei/cedar-icons",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "homepage": "https://rei.github.io/cedar-icons/",
   "description": "REI Cedar Icon Library",
   "license": "MIT",
@@ -8,6 +8,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist",
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
   "author": "REI Software Engineering",
   "scripts": {
     "build": "npm-run-all build:data build:full-sprite copyIcons",
