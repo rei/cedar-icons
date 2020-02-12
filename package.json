@@ -8,6 +8,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist",
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
   "author": "REI Software Engineering",
   "scripts": {
     "build": "npm-run-all build:data build:full-sprite copyIcons",
