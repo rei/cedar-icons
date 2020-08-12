@@ -91,7 +91,7 @@ export default {
   .icon-box__wrapper {
     height: 100%;
   }
-  
+
   .icon-box__label {
     width: 100%;
     height: 100%;
@@ -105,9 +105,9 @@ export default {
   }
 
   .icon-box:checked ~ .icon-box__content {
-    border: 1px solid $cdr-color-text-link-lightmode;
-    color: $cdr-color-text-link-lightmode;
-    fill: $cdr-color-text-link-lightmode;
+    border: 1px solid $cdr-color-border-link-rest;
+    color: $cdr-color-text-link-rest;
+    fill: $cdr-color-icon-link;
   }
 
   .make-button {

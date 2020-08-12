@@ -41,7 +41,7 @@ export default {
 
 html {
   height: 100%;
-  background-color: $cdr-color-background-light;
+  background-color: $cdr-color-background-primary;
 }
 
 .router-link {
@@ -50,6 +50,6 @@ html {
 }
 
 .page-wrap {
-  background-color: $cdr-color-background-light;
+  background-color: $cdr-color-background-primary;
 }
 </style>
