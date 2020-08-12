@@ -62,9 +62,6 @@ const QUESTIONS = [
         iconsToFilter = getIconsFromFile(answers.inputSprite);
       }
 
-      // sets.forEach(set => {
-      //   iconChoices.push(new inquirer.Separator(`---${set}---`));
-
       const icons = Object.keys(allIcons);
       icons.forEach(icon => {
         const isChecked = iconsToFilter === false ? false : hasDeep(iconsToFilter, icon);
@@ -74,7 +71,6 @@ const QUESTIONS = [
           checked: isChecked,
         });
       })
-      // })
 
       return iconChoices;
     }
