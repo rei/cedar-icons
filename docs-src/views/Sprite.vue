@@ -42,7 +42,7 @@ export default {
 }
 </script>
 <template>
-<div class="cdr-text-center">
+<div class="cdr-align-text-center">
   <router-link
     to="/"
     v-show="$route.name !== 'home'"
@@ -67,6 +67,7 @@ export default {
             input-class="icon-box"
             label-class="icon-box__label"
             content-class="icon-box__content"
+            class="icon-box__wrapper"
           >
             <cdr-icon
               size="large"
@@ -87,11 +88,17 @@ export default {
 <style lang="scss">
   @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
 
+  .icon-box__wrapper {
+    height: 100%;
+  }
+  
   .icon-box__label {
     width: 100%;
+    height: 100%;
   }
 
   .icon-box__content {
+    height: 100%;
     width: 100%;
     padding: $cdr-space-inset-one-x;
     border: 1px solid transparent;

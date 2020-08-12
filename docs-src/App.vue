@@ -4,7 +4,7 @@
     <cdr-text
       tag="h1"
       modifier="heading-serif-strong-700 heading-serif-strong-900@md heading-serif-strong-1100@lg"
-      class="cdr-text-center"
+      class="cdr-align-text-center"
     >@rei/cedar-icons</cdr-text>
 
     <router-view :icon-data="iconData"/>
