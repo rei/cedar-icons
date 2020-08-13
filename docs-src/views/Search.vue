@@ -1,5 +1,5 @@
 <template>
-  <div class="cdr-text-center">
+  <div class="cdr-align-text-center">
     <router-link
       to="/sprite"
       v-show="$route.name !== 'sprite'"
