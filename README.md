@@ -81,3 +81,12 @@ npm run serve
 ```
 npm run build
 ```
+
+## Development
+
+Assets added to this repo should conform to the  [CdrIcon guidelines](https://rei.github.io/rei-cedar-docs/icons/resources/#cedar-icon-guidelines).
+Before adding a new icon to this repo, first run the optimization script:
+
+`node build/svgo.js PATH_TO_NEW_ICON.svg`
+
+This script will run the icon data through SVGO to reduce it's file size, then copy it into the `/icons` directory. 
