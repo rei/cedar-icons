@@ -28,7 +28,7 @@
     "@rei/cedar": "^5.0.0",
     "@vue/cli-plugin-babel": "^4.5.3",
     "@vue/cli-plugin-eslint": "^4.5.3",
-    "@vue/cli-service": "^4.5.3",
+    "@vue/cli-service": "^5.0.8",
     "babel-eslint": "^10.1.0",
     "core-js": "^3.6.5",
     "downloadjs": "^1.4.7",
