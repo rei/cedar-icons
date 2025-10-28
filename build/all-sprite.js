@@ -26,4 +26,4 @@ const makeSprite = (filePath, iconObj) => {
 
 makeSprite(path.resolve('icons/'), {});
 
-fs.outputFileSync('dist/all-icons.svg', sprite);
+fs.outputFileSync('dist/all-icons.svg', sprite.toString());

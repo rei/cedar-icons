@@ -49,6 +49,7 @@ import merge from 'lodash/merge';
 import tags from '../tags';
 
 export default {
+  // eslint-disable-next-line
   name: 'Search',
   components: {
     HtmlFragment,
